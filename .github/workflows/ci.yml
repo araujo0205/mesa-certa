@@ -8,8 +8,6 @@ on:
 
 jobs:
   code-quality:
-    env:
-      COMPOSER_CACHE_DIR: .cache/composer
       
     runs-on: ubuntu-latest
     name: 🔍 Code Quality (Pint & Stan)
@@ -34,8 +32,6 @@ jobs:
       run: ./vendor/bin/phpstan analyse --memory-limit=2G
 
   tests:
-    env:
-      COMPOSER_CACHE_DIR: .cache/composer
 
     runs-on: ubuntu-latest
     name: Unit & Feature Tests
